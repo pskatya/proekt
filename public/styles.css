@@ -1,0 +1,317 @@
+/* Общие стили для страницы */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Контейнер для аутентификации (регистрация/логин) */
+
+.auth-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+
+/* Форма ввода данных (регистрация и логин) */
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+/* Поля ввода (для регистрации/логина и заметок) */
+
+input[type="text"],
+input[type="password"],
+input[type="textarea"],
+select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 100%;
+}
+
+
+/* Контейнер для выбора роли */
+
+.role-container select {
+    font-size: 14px;
+}
+
+
+/* Кнопки (регистрация/логин) */
+
+.buttons-container {
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#registerBtn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#registerBtn:hover {
+    background-color: #45a049;
+}
+
+#loginBtn {
+    background-color: #2196F3;
+    color: white;
+}
+
+#loginBtn:hover {
+    background-color: #1e88e5;
+}
+
+
+/* Ошибка при неверных данных (для регистрации и логина) */
+
+.error {
+    color: red;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+/* Стиль для страницы заметок */
+
+.notes-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logoutBtn {
+    background-color: #f44336;
+    color: white;
+    display: flex;
+    margin-left: auto;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#logoutBtn:hover {
+    background-color: #e53935;
+}
+
+
+/* Форма для создания заметки */
+
+#noteForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+input[type="text"],
+textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 100%;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+
+/* Селект для видимости заметки */
+
+#noteVisibility {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+
+/* Кнопка для создания заметки */
+
+#createNoteBtn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    display: flex;
+    margin-left: auto;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#createNoteBtn:hover {
+    background-color: #45a049;
+}
+
+
+/* Контейнер для списка заметок */
+
+#noteList {
+    margin-top: 30px;
+}
+
+.note {
+    position: relative;
+    background-color: #f9f9f9;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    /* Ограничиваем ширину карточки */
+    overflow: hidden;
+    /* Обрезаем контент, если он выходит за пределы */
+    word-wrap: break-word;
+    /* Перенос длинных слов */
+    white-space: normal;
+    /* Разрешаем перенос текста */
+}
+
+.note h3 {
+    margin: 0 0 10px;
+}
+
+.note small {
+    color: #777;
+    font-size: 12px;
+}
+
+
+/* Стиль для имени создателя заметки */
+
+.note .creator-name {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #777;
+}
+
+
+/* Стиль для фильтрации */
+
+.filter-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.filter-container input,
+.filter-container select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 200px;
+}
+
+#filterBtn:hover {
+    background-color: #a9a8a8cc;
+}
+
+
+/* Стили для загрузки / обработки данных */
+
+.loading {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #555;
+}
+
+
+/* Кнопка удаления заметки (мусорка) */
+
+.deleteNoteBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #555;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.deleteNoteBtn:hover {
+    color: #ff4d4d;
+    transform: scale(1.2);
+}
+
+
+/* Кнопка редактирования заметки (карандашик) */
+
+.editNoteBtn {
+    position: absolute;
+    top: 10px;
+    right: 60px;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #555;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.editNoteBtn:hover {
+    color: #ff4d4d;
+    transform: scale(1.2);
+}
+
+
+/* Для текста заметки, чтобы предотвратить выход за пределы карточки */
+
+.note-content {
+    white-space: normal;
+    /* Разрешаем перенос строк */
+    word-wrap: break-word;
+    /* Перенос длинных слов, если они не помещаются */
+    overflow-wrap: break-word;
+    /* То же самое для всех типов текста */
+    word-break: break-word;
+    /* Перенос строк в случае длинных слов */
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register or Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="auth-container">
+        <h2>Register or Login</h2>
+        <div class="form-container">
+            <input type="text" id="name" placeholder="Enter name" />
+            <input type="password" id="password" placeholder="Enter password" />
+        </div>
+        <br>
+        <div class="buttons-container">
+            <button id="registerBtn" class="btn">Register</button>
+            <button id="loginBtn" class="btn">Login</button>
+        </div>
+        <div id="error-message" class="error"></div>
+    </div>
+
+    <div class="system-info-container">
+        <div id="system-info">
+            <!-- Информация о характеристиках устройства будет добавлена через JavaScript -->
+        </div>
+    </div>
+
+    <div class="system-info">
+        <h3>Информация о системе:</h3>
+        <p>Hostname: <span id="hostname"></span></p>
+        <p>Platform: <span id="platform"></span></p>
+        <p>Architecture: <span id="architecture"></span></p>
+        <p>CPU Count: <span id="cpuCount"></span></p>
+        <p>Free Memory: <span id="freeMemory"></span></p>
+        <p>Total Memory: <span id="totalMemory"></span></p>
+    </div>
+
+    <div class="file-data">
+        <h3>Данные из файла:</h3>
+        <pre id="fileData"></pre>
+    </div>
+
+    <script src="scripts/auth.js"></script>
+
+</body>
+
+</html>
